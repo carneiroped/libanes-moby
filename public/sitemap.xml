@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Páginas principais -->
+  <url>
+    <loc>https://imobiliaria.moby.casa/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/landing</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Páginas de entrada e cadastro -->
+  <url>
+    <loc>https://imobiliaria.moby.casa/login</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/registro</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/recuperar-senha</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Páginas de contato e ferramentas -->
+  <url>
+    <loc>https://imobiliaria.moby.casa/contato</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/calculadora-maturidade</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Páginas do Admin (sem mostrar subpáginas sensíveis) -->
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/dashboard</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/moby</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/analytics</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/imoveis</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/leads</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/chats</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/leadszap</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://imobiliaria.moby.casa/admin/config/feature-flags</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+</urlset>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://imobiliaria.moby.casa/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/

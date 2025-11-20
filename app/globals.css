@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme - Based on provided specifications */
+    --background: 160 9% 96%; /* #F4F7F6 */
+    --foreground: 0 0% 7%; /* #111111 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 0 0% 7%; /* #111111 */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 0 0% 7%; /* #111111 */
+    --primary: 163 100% 36%; /* #00B87C */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary-hover: 164 100% 32%; /* #00A66C */
+    --secondary: 139 39% 91%; /* #DFF2EA */
+    --secondary-foreground: 0 0% 7%; /* #111111 */
+    --muted: 139 39% 91%; /* #DFF2EA */
+    --muted-foreground: 215 14% 40%; /* Soft text */
+    --accent: 163 100% 36%; /* #00B87C */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 90% 65%; /* #FF4C4C */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 44 28% 90%; /* Subtle border */
+    --input: 44 28% 90%; /* Form input border */
+    --ring: 163 100% 36%; /* #00B87C */
+    --radius: 0.5rem;
+    --chart-1: 163 100% 36%; /* #00B87C */
+    --chart-2: 168 71% 40%;
+    --chart-3: 47 89% 63%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 262 83% 58%;
+  }
+
+  .dark {
+    /* Dark Theme - Based on provided specifications */
+    --background: 0 0% 12%; /* #1E1E1E */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --card: 0 0% 16%; /* #2A2A2A */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
+    --popover: 0 0% 16%; /* #2A2A2A */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary: 159 100% 39%; /* #00C37A */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary-hover: 160 100% 35%; /* Slightly darker */
+    --secondary: 0 0% 24%; /* #3C3C3C */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 0 0% 20%; /* #333333 */
+    --muted-foreground: 0 0% 75%; /* Soft text */
+    --accent: 159 100% 39%; /* #00C37A */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 78% 65%; /* #FF4C4C */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 27%; /* #444444 */
+    --input: 0 0% 27%; /* #444444 */
+    --ring: 159 100% 39%; /* #00C37A */
+    --chart-1: 159 100% 39%; /* #00C37A */
+    --chart-2: 168 60% 45%;
+    --chart-3: 47 75% 65%;
+    --chart-4: 0 70% 60%;
+    --chart-5: 262 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Landing page specific styles */
+  body.landing-page {
+    background-color: #262626 !important; /* neutral-800 - cinza neutro */
+  }
+}
+
+/* Estilos migrados do aplicativo Vite */
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-light;
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-to-r from-accent-dark via-accent to-accent-light;
+  }
+  
+  .dark-glass {
+    @apply bg-black/30 backdrop-blur-xl;
+  }
+  
+  .dark-glass-strong {
+    @apply bg-black/60 backdrop-blur-xl;
+  }
+  
+  /* Estilo personalizado para opções de respostas na calculadora */
+  label.option-select {
+    @apply relative block w-full rounded-lg p-4 mb-2 cursor-pointer transition-all;
+  }
+  
+  label.option-select:hover {
+    @apply bg-primary/10 shadow-md;
+  }
+  
+  .grid-pattern, .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(22, 163, 74, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22, 163, 74, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: grid-move 20s linear infinite;
+  }
+  
+  @keyframes grid-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+  
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .cube-3d {
+    transform-style: preserve-3d;
+    animation: rotate3d 20s infinite linear;
+  }
+  
+  @keyframes rotate3d {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  /* Transformações 3D para o cubo */
+  .transform.translate-z-24 {
+    transform: translateZ(24px);
+  }
+  
+  .transform.-translate-z-24 {
+    transform: translateZ(-24px);
+  }
+  
+  .transform.translate-x-24 {
+    transform: translateX(24px);
+  }
+  
+  .transform.-translate-x-24 {
+    transform: translateX(-24px);
+  }
+  
+  .transform.translate-y-24 {
+    transform: translateY(24px);
+  }
+  
+  .transform.-translate-y-24 {
+    transform: translateY(-24px);
+  }
+  
+  /* Transformações 3D aumentadas para o cubo grande */
+  .transform.translate-z-40 {
+    transform: translateZ(40px);
+  }
+  
+  .transform.-translate-z-40 {
+    transform: translateZ(-40px);
+  }
+  
+  .transform.translate-x-40 {
+    transform: translateX(40px);
+  }
+  
+  .transform.-translate-x-40 {
+    transform: translateX(-40px);
+  }
+  
+  .transform.translate-y-40 {
+    transform: translateY(40px);
+  }
+  
+  .transform.-translate-y-40 {
+    transform: translateY(-40px);
+  }
+  
+  /* Efeito de sombra neon usado nos botões e cards */
+  .shadow-neon {
+    box-shadow: 0 0 10px rgba(0, 195, 122, 0.3);
+  }
+  
+  .shadow-neon-strong {
+    box-shadow: 0 0 20px rgba(0, 195, 122, 0.5);
+  }
+}
