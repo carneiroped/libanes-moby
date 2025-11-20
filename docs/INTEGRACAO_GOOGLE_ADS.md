@@ -49,7 +49,7 @@ Google Ads Lead Form
 4. Configure OAuth 2.0:
    - Client ID
    - Client Secret
-   - Redirect URI: https://leo.moby.casa/admin/integracoes/google-ads/callback
+   - Redirect URI: https://libanes.moby.casa/admin/integracoes/google-ads/callback
 5. Gere Refresh Token
 6. Obtenha Developer Token (requer aprovação)
 ```
@@ -61,7 +61,7 @@ Google Ads Lead Form
 2. Adicione extensão "Lead form"
 3. Configure campos do formulário
 4. Configure Webhook em conversões:
-   - URL: https://leo.moby.casa/api/webhooks/google-ads-leads
+   - URL: https://libanes.moby.casa/api/webhooks/google-ads-leads
    - Método: POST
    - Cabeçalhos: Authorization com webhook_secret
 ```
@@ -69,7 +69,7 @@ Google Ads Lead Form
 ### 3. Ativar Integração no Sistema
 
 ```bash
-# Acesse: https://leo.moby.casa/admin/integracoes/google-ads
+# Acesse: https://libanes.moby.casa/admin/integracoes/google-ads
 
 1. Clique em "Configurar"
 2. Preencha credenciais:
@@ -98,7 +98,7 @@ Buscar configuração da integração
     "id": "uuid",
     "account_id": "uuid",
     "customer_id": "123-456-7890",
-    "webhook_url": "https://leo.moby.casa/api/webhooks/google-ads-leads",
+    "webhook_url": "https://libanes.moby.casa/api/webhooks/google-ads-leads",
     "webhook_secret": "secret",
     "is_active": true,
     "total_leads_received": 150,
@@ -265,7 +265,7 @@ Você pode adicionar até 15 campos personalizados:
 
 ### Dashboard
 
-Acesse: `https://leo.moby.casa/admin/integracoes/google-ads`
+Acesse: `https://libanes.moby.casa/admin/integracoes/google-ads`
 
 Visualize:
 - Gráfico de leads por dia
@@ -318,7 +318,7 @@ WHERE error_message IS NOT NULL;
 1. Verifique configuração no Google Ads
 2. Teste URL manualmente:
 ```bash
-curl -X POST https://leo.moby.casa/api/webhooks/google-ads-leads \
+curl -X POST https://libanes.moby.casa/api/webhooks/google-ads-leads \
   -H "Content-Type: application/json" \
   -H "X-Google-Ads-Signature: test" \
   -d '{"gclid":"test"}'

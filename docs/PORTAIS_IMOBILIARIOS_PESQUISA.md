@@ -29,7 +29,7 @@ Pesquisa realizada sobre 4 portais imobiliários para integração de leads:
 - **Mesmo grupo empresarial** (Grupo OLX)
 - **Mesma SECRET_KEY** para todos os 3 portais
 - **Mesmo webhook** recebe leads dos 3
-- **URL**: `https://leo.moby.casa/api/webhooks/olx-zap-leads`
+- **URL**: `https://libanes.moby.casa/api/webhooks/olx-zap-leads`
 
 ### Contato:
 - Email: chamado.integracao@olxbr.com
@@ -112,7 +112,7 @@ Gostaríamos de integrar nosso CRM com o portal Chaves na Mão para:
 
 Informações do nosso sistema:
 - Nome: Moby CRM
-- Website: https://leo.moby.casa
+- Website: https://libanes.moby.casa
 - Tipo: SaaS para imobiliárias
 - Número de clientes: [X clientes]
 
@@ -124,7 +124,7 @@ Solicitamos:
 ✅ Requisitos técnicos (autenticação, headers, etc)
 
 URL do nosso webhook (produção):
-https://leo.moby.casa/api/webhooks/chaves-na-mao-leads
+https://libanes.moby.casa/api/webhooks/chaves-na-mao-leads
 
 Aguardo retorno!
 
@@ -228,7 +228,7 @@ Perguntas:
 
 Informações do nosso sistema:
 - Nome: Moby CRM
-- Website: https://leo.moby.casa
+- Website: https://libanes.moby.casa
 - Atendemos imobiliárias de Santa Catarina e todo Brasil
 
 Aguardo retorno!
@@ -326,7 +326,7 @@ Assunto: Solicitação de Homologação - Integração Moby CRM
 
 Olá, equipe Chaves na Mão!
 
-Meu nome é [Nome], da Moby CRM (https://leo.moby.casa), sistema
+Meu nome é [Nome], da Moby CRM (https://libanes.moby.casa), sistema
 de gestão para imobiliárias.
 
 Gostaríamos de integrar nosso CRM com o Chaves na Mão para que
@@ -343,7 +343,7 @@ Solicito:
 ✅ Processo para aprovação em produção
 
 Informações técnicas:
-- URL do webhook: https://leo.moby.casa/api/webhooks/chaves-na-mao-leads
+- URL do webhook: https://libanes.moby.casa/api/webhooks/chaves-na-mao-leads
 - Método suportado: POST
 - Formato aceito: JSON
 - Autenticação: Podemos implementar qualquer método necessário
@@ -384,7 +384,7 @@ Perguntas:
 - Há documentação técnica disponível?
 - Quem é o contato da área técnica/integrações?
 
-Nosso sistema: https://leo.moby.casa
+Nosso sistema: https://libanes.moby.casa
 
 Aguardo retorno!
 

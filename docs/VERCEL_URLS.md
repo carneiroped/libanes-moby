@@ -4,7 +4,7 @@
 
 ### **URL Principal (Custom Domain)**
 ```
-https://leo.moby.casa
+https://libanes.moby.casa
 ```
 ✅ **USE ESTA URL** para produção
 
@@ -12,18 +12,18 @@ https://leo.moby.casa
 
 #### Production
 ```
-https://minhamoby-leonardo-ok.vercel.app
-https://minhamoby-leonardo-ok-engpedrocarneiros-projects.vercel.app
+https://minhamoby-libanes-ok.vercel.app
+https://minhamoby-libanes-ok-engpedrocarneiros-projects.vercel.app
 ```
 
 #### Git Branch: main
 ```
-https://minhamoby-leonardo-ok-git-main-engpedrocarneiros-projects.vercel.app
+https://minhamoby-libanes-ok-git-main-engpedrocarneiros-projects.vercel.app
 ```
 
 #### Preview (deployments temporários)
 ```
-https://minhamoby-leonardo-ef6efwgi7-engpedrocarneiros-projects.vercel.app
+https://minhamoby-libanes-ef6efwgi7-engpedrocarneiros-projects.vercel.app
 ```
 
 ---
@@ -35,7 +35,7 @@ https://minhamoby-leonardo-ef6efwgi7-engpedrocarneiros-projects.vercel.app
 **Vercel Dashboard:**
 1. Seu Projeto > Settings > Environment Variables
 2. Buscar: `NEXT_PUBLIC_APP_URL`
-3. Atualizar para: `https://leo.moby.casa`
+3. Atualizar para: `https://libanes.moby.casa`
 4. Environment: **Production**, **Preview**, **Development**
 5. **Save** e **Redeploy**
 
@@ -44,7 +44,7 @@ https://minhamoby-leonardo-ef6efwgi7-engpedrocarneiros-projects.vercel.app
 Se precisar configurar CORS para APIs:
 
 ```env
-ALLOWED_ORIGINS=https://leo.moby.casa,https://minhamoby-leonardo-ok.vercel.app
+ALLOWED_ORIGINS=https://libanes.moby.casa,https://minhamoby-libanes-ok.vercel.app
 ```
 
 ---
@@ -53,8 +53,8 @@ ALLOWED_ORIGINS=https://leo.moby.casa,https://minhamoby-leonardo-ok.vercel.app
 
 | Situação | URL Recomendada |
 |----------|-----------------|
-| **Produção (usuários)** | `https://leo.moby.casa` |
-| **Testes de deploy** | `https://minhamoby-leonardo-ok.vercel.app` |
+| **Produção (usuários)** | `https://libanes.moby.casa` |
+| **Testes de deploy** | `https://minhamoby-libanes-ok.vercel.app` |
 | **Preview de PR** | URL gerada automaticamente |
 | **Desenvolvimento local** | `http://localhost:3000` |
 
@@ -65,7 +65,7 @@ ALLOWED_ORIGINS=https://leo.moby.casa,https://minhamoby-leonardo-ok.vercel.app
 ### 1. Testar URL Principal
 ```bash
 # Abrir no browser
-open https://leo.moby.casa/login
+open https://libanes.moby.casa/login
 ```
 
 ### 2. Testar Login
@@ -80,7 +80,7 @@ open https://leo.moby.casa/login
 
 ### 4. Verificar Logs Vercel
 ```bash
-vercel logs minhamoby-leonardo-ok --follow
+vercel logs minhamoby-libanes-ok --follow
 ```
 
 ---
@@ -89,13 +89,13 @@ vercel logs minhamoby-leonardo-ok --follow
 
 ### Configuração Atual
 
-**Domain:** `leo.moby.casa`
+**Domain:** `libanes.moby.casa`
 **Status:** ✅ Configurado na Vercel
 
 ### Se precisar reconfigurar:
 
 1. Vercel Dashboard > Seu Projeto > Settings > Domains
-2. Add Domain: `leo.moby.casa`
+2. Add Domain: `libanes.moby.casa`
 3. Seguir instruções DNS (CNAME ou A record)
 4. Aguardar propagação (até 48h, geralmente ~10min)
 
@@ -112,7 +112,7 @@ git commit -m "feat: sua mensagem"
 git push origin main
 
 # Vercel detecta push e faz deploy
-# URL production: https://leo.moby.casa
+# URL production: https://libanes.moby.casa
 ```
 
 ### Preview Deploys (Pull Requests)
@@ -138,12 +138,12 @@ git push origin feature/nova-funcionalidade
 
 ### Analytics (Vercel)
 ```
-https://vercel.com/engpedrocarneiros-projects/minhamoby-leonardo-ok/analytics
+https://vercel.com/engpedrocarneiros-projects/minhamoby-libanes-ok/analytics
 ```
 
 ### Logs em Tempo Real
 ```bash
-vercel logs minhamoby-leonardo-ok --follow
+vercel logs minhamoby-libanes-ok --follow
 ```
 
 ### Métricas
@@ -155,10 +155,10 @@ vercel logs minhamoby-leonardo-ok --follow
 
 ## 🐛 Troubleshooting
 
-### Problema: leo.moby.casa não resolve
+### Problema: libanes.moby.casa não resolve
 
 **Solução:**
-1. Verificar DNS: `dig leo.moby.casa`
+1. Verificar DNS: `dig libanes.moby.casa`
 2. Vercel > Settings > Domains
 3. Verificar status do domínio
 4. Aguardar propagação DNS
@@ -168,7 +168,7 @@ vercel logs minhamoby-leonardo-ok --follow
 **Solução:**
 - Vercel provisiona SSL automaticamente (Let's Encrypt)
 - Aguardar até 24h após adicionar domínio
-- Verificar: `https://www.ssllabs.com/ssltest/analyze.html?d=leo.moby.casa`
+- Verificar: `https://www.ssllabs.com/ssltest/analyze.html?d=libanes.moby.casa`
 
 ### Problema: Redirects não funcionam
 
@@ -183,8 +183,8 @@ vercel logs minhamoby-leonardo-ok --follow
 
 **Production:**
 ```env
-NEXT_PUBLIC_APP_URL=https://leo.moby.casa
-ALLOWED_ORIGINS=https://leo.moby.casa,https://minhamoby-leonardo-ok.vercel.app
+NEXT_PUBLIC_APP_URL=https://libanes.moby.casa
+ALLOWED_ORIGINS=https://libanes.moby.casa,https://minhamoby-libanes-ok.vercel.app
 ```
 
 **Development:**

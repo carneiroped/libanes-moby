@@ -23,7 +23,7 @@ Este documento é para vocês ajudarem os clientes a configurar a integração.
 
 **URL da página:**
 ```
-https://leo.moby.casa/admin/integracoes/olx-zap
+https://libanes.moby.casa/admin/integracoes/olx-zap
 ```
 
 **Caminho no menu:**
@@ -33,7 +33,7 @@ Configurações → Integração OLX/ZAP
 
 **URL do webhook (para copiar):**
 ```
-https://leo.moby.casa/api/webhooks/olx-zap-leads
+https://libanes.moby.casa/api/webhooks/olx-zap-leads
 ```
 
 ### No Canal Pro (ZAP):
@@ -69,7 +69,7 @@ Integrações → Webhook de Leads
 **Dizer para o cliente:**
 
 ```
-1. Entre no sistema: https://leo.moby.casa
+1. Entre no sistema: https://libanes.moby.casa
 2. No menu lateral, clique em "Configurações"
 3. Depois clique em "Integração OLX/ZAP"
 4. Você vai ver uma caixa com um link grande
@@ -109,7 +109,7 @@ Integrações → Webhook de Leads
 
 **Solução:**
 - Verificar se o usuário tem permissão (role: admin ou manager)
-- Enviar o link direto: https://leo.moby.casa/admin/integracoes/olx-zap
+- Enviar o link direto: https://libanes.moby.casa/admin/integracoes/olx-zap
 - Verificar se fez login
 
 ### Cliente não consegue acessar Canal Pro
@@ -129,7 +129,7 @@ Integrações → Webhook de Leads
 ### Colou o link mas não funciona
 
 **Verificar:**
-1. Link está completo? `https://leo.moby.casa/api/webhooks/olx-zap-leads`
+1. Link está completo? `https://libanes.moby.casa/api/webhooks/olx-zap-leads`
 2. Integração está LIGADA no Canal Pro?
 3. Salvou as configurações no Canal Pro?
 4. Atualizou a página no Moby CRM?
@@ -209,7 +209,7 @@ LIMIT 10;
 **Deve ter:**
 ```
 OLX_ZAP_SECRET_KEY=dml2YXJlYWw6ZjZmMTg0MDhkNTE1ZDE3NmRjYTE5ODlhYjY1ZTVmNjk=
-NEXT_PUBLIC_APP_URL=https://leo.moby.casa
+NEXT_PUBLIC_APP_URL=https://libanes.moby.casa
 ```
 
 Se não tiver, adicionar na Vercel e fazer redeploy.
@@ -309,7 +309,7 @@ Olá [Nome]!
 Para começar a receber os leads do ZAP Imóveis automaticamente no Moby CRM,
 é super simples:
 
-1. Entre em: https://leo.moby.casa/admin/integracoes/olx-zap
+1. Entre em: https://libanes.moby.casa/admin/integracoes/olx-zap
 2. Copie o link que aparecer
 3. Entre no Canal Pro do ZAP
 4. Cole o link em Integrações → Integração de Leads
@@ -404,7 +404,7 @@ Usar para cada novo cliente:
 
 ### Para o Cliente:
 - Guia do Cliente: `/docs/GUIA_CLIENTE_INTEGRACAO_OLX_ZAP.md`
-- Página da integração: https://leo.moby.casa/admin/integracoes/olx-zap
+- Página da integração: https://libanes.moby.casa/admin/integracoes/olx-zap
 - Guia oficial ZAP: https://ajuda.zapmais.com/s/article/como-ativar-a-integracao-de-leads
 
 ### Documentação Técnica:

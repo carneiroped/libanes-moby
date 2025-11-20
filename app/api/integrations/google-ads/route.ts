@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       .eq('account_id', accountId)
       .single();
 
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://leo.moby.casa';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://libanes.moby.casa';
     const webhookUrl = `${baseUrl}/api/webhooks/google-ads-leads`;
     const webhookSecret = randomBytes(32).toString('hex');
 

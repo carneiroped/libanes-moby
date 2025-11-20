@@ -37,7 +37,7 @@ Mantenha `.env.example` atualizado (já criado no repositório).
 
 1. Acesse [vercel.com/new](https://vercel.com/new)
 2. Conecte sua conta Git (GitHub/GitLab/Bitbucket)
-3. Selecione o repositório `minhamoby-leonardo-ok`
+3. Selecione o repositório `libanes-moby`
 4. Configure:
    - **Framework Preset:** Next.js
    - **Root Directory:** `./` (padrão)
@@ -141,7 +141,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=
 
 1. Após adicionar TODAS as variáveis, clique em **"Deploy"**
 2. Aguarde o build (2-5 minutos)
-3. Anote a URL gerada (ex: `https://minhamoby-leonardo-ok.vercel.app`)
+3. Anote a URL gerada (ex: `https://libanes-moby.vercel.app`)
 
 ### 4.2 Atualizar NEXT_PUBLIC_APP_URL
 

@@ -5,8 +5,7 @@
 O projeto foi criado com sucesso e está pronto para ser enviado para o GitHub:
 
 ```
-✅ Projeto clonado do Leonardo
-✅ Referências atualizadas para Libanês
+✅ Projeto configurado para Cliente Libanês
 ✅ Dependências instaladas
 ✅ TypeScript: 0 erros
 ✅ ESLint: 0 warnings

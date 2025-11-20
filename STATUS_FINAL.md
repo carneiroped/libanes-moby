@@ -8,7 +8,7 @@ O projeto foi criado com sucesso e está completamente pronto para uso.
 
 ## 🎯 O Que Foi Feito
 
-### ✅ Projeto Leonardo (Intacto)
+### ✅ Projeto outro cliente (Intacto)
 ```
 Diretório: /home/user/minhamoby-leonardo-ok
 Repositório: https://github.com/carneiroped/minhamoby-leonardo-ok
@@ -31,7 +31,7 @@ Status: Tudo commitado, aguardando push manual
 
 | Item | Status | Detalhes |
 |------|--------|----------|
-| Código copiado | ✅ | Clone completo do Leonardo |
+| Código copiado | ✅ | Clone completo do outro cliente |
 | Referências atualizadas | ✅ | URLs, nomes, package.json |
 | Dependências | ✅ | 1012 packages instalados |
 | TypeScript | ✅ | 0 erros |
@@ -86,9 +86,9 @@ Total: 524 arquivos | ~160k linhas de código
 
 ---
 
-## 🔍 Diferenças Leonardo vs Libanês
+## 🔍 Diferenças outro cliente vs Libanês
 
-| Aspecto | Leonardo | Libanês |
+| Aspecto | outro cliente | Libanês |
 |---------|----------|---------|
 | URL | leo.moby.casa | libanês.moby.casa |
 | Nome | Moby Imobiliária | Moby Imobiliária - Libanês |
@@ -155,7 +155,7 @@ vercel
 
 ## ✅ Checklist
 
-- [x] Projeto Leonardo mantido intacto
+- [x] Projeto outro cliente mantido intacto
 - [x] Projeto Libanês criado em diretório separado
 - [x] Código clonado e adaptado
 - [x] Referências atualizadas

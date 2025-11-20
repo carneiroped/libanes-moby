@@ -20,7 +20,7 @@ Status: ✅ Tudo commitado e pronto
 
 1. **2161881** - `feat: projeto inicial Moby CRM - Cliente Libanês`
    - 522 arquivos
-   - Projeto completo clonado do Leonardo
+   - Projeto completo configurado para Cliente Libanês
    - TypeScript, ESLint, Build testados
 
 2. **38b0ac5** - `docs: adicionar instruções de push para GitHub`

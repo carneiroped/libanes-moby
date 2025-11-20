@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     const supabase = getServiceClient();
 
     // Gerar webhook URL e tokens
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://leo.moby.casa';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://libanes.moby.casa';
     const webhookUrl = `${baseUrl}/api/webhooks/meta-ads-leads`;
     const webhookSecret = randomBytes(32).toString('hex');
     const verifyToken = randomBytes(16).toString('hex');

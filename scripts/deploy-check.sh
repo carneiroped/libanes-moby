@@ -156,8 +156,8 @@ else
   echo "  vercel --prod"
   echo ""
   echo "URLs de produção:"
-  echo "  - https://leo.moby.casa"
-  echo "  - https://minhamoby-leonardo-ok.vercel.app"
+  echo "  - https://libanes.moby.casa"
+  echo "  - https://minhamoby-libanes.vercel.app"
 fi
 
 exit 0

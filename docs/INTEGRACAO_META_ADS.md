@@ -64,7 +64,7 @@ Facebook/Instagram Lead Form
 ```bash
 1. App Dashboard → Webhooks
 2. Novo webhook → Objeto: "Page"
-3. URL de callback: https://leo.moby.casa/api/webhooks/meta-ads-leads
+3. URL de callback: https://libanes.moby.casa/api/webhooks/meta-ads-leads
 4. Verify Token: (será gerado pelo sistema)
 5. Campos de assinatura:
    - leadgen
@@ -99,7 +99,7 @@ Facebook/Instagram Lead Form
 ### 5. Ativar Integração no Sistema
 
 ```bash
-# Acesse: https://leo.moby.casa/admin/integracoes/meta-ads
+# Acesse: https://libanes.moby.casa/admin/integracoes/meta-ads
 
 1. Clique em "Configurar"
 2. Preencha credenciais:
@@ -131,7 +131,7 @@ Buscar configuração da integração
     "app_id": "123456789",
     "page_id": "987654321",
     "instagram_account_id": "111222333",
-    "webhook_url": "https://leo.moby.casa/api/webhooks/meta-ads-leads",
+    "webhook_url": "https://libanes.moby.casa/api/webhooks/meta-ads-leads",
     "verify_token": "token",
     "is_active": true,
     "total_leads_received": 250,
@@ -161,7 +161,7 @@ Criar ou atualizar integração
 ```json
 {
   "integration": { ... },
-  "webhook_url": "https://leo.moby.casa/api/webhooks/meta-ads-leads",
+  "webhook_url": "https://libanes.moby.casa/api/webhooks/meta-ads-leads",
   "verify_token": "generated_token"
 }
 ```
@@ -356,7 +356,7 @@ Você pode adicionar até 15 perguntas personalizadas:
 
 ### Dashboard
 
-Acesse: `https://leo.moby.casa/admin/integracoes/meta-ads`
+Acesse: `https://libanes.moby.casa/admin/integracoes/meta-ads`
 
 Visualize:
 - Gráfico de leads por dia
@@ -420,7 +420,7 @@ WHERE error_message IS NOT NULL;
 2. Verificar Verify Token:
 ```bash
 # Deve retornar o challenge
-curl "https://leo.moby.casa/api/webhooks/meta-ads-leads?hub.mode=subscribe&hub.verify_token=SEU_TOKEN&hub.challenge=test"
+curl "https://libanes.moby.casa/api/webhooks/meta-ads-leads?hub.mode=subscribe&hub.verify_token=SEU_TOKEN&hub.challenge=test"
 ```
 
 3. Verificar permissões da App:

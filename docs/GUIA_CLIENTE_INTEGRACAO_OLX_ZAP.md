@@ -31,7 +31,7 @@ Depois disso, funciona sozinho para sempre!
 
 ### Passo 1️⃣ - Entrar na Página de Integração
 
-1. Entre no seu sistema Moby CRM: **https://leo.moby.casa**
+1. Entre no seu sistema Moby CRM: **https://libanes.moby.casa**
 
 2. Faça login com seu usuário e senha
 
@@ -48,7 +48,7 @@ Depois disso, funciona sozinho para sempre!
 
 1. Na tela que abriu, você verá uma caixa com um link grande. Algo assim:
    ```
-   https://leo.moby.casa/api/webhooks/olx-zap-leads
+   https://libanes.moby.casa/api/webhooks/olx-zap-leads
    ```
 
 2. Clique no **botão de copiar** (ícone de duas folhinhas 📋) ao lado do link
@@ -110,7 +110,7 @@ Você vai encontrar uma tela escrita algo como:
 
 4. O link deve aparecer assim:
    ```
-   https://leo.moby.casa/api/webhooks/olx-zap-leads
+   https://libanes.moby.casa/api/webhooks/olx-zap-leads
    ```
 
 5. Verifique se o link está COMPLETO (começa com https:// e termina em leads)
@@ -310,7 +310,7 @@ https://ajuda.zapmais.com/s/article/como-ativar-a-integracao-de-leads
 
 Use esta lista para não esquecer nada:
 
-- [ ] Entrei no Moby CRM (https://leo.moby.casa)
+- [ ] Entrei no Moby CRM (https://libanes.moby.casa)
 - [ ] Fui em Configurações → Integração OLX/ZAP
 - [ ] Copiei o link que apareceu
 - [ ] Entrei no Canal Pro (https://www.canalpro.com.br/)

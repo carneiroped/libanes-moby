@@ -108,9 +108,9 @@ Cliente quer configurar integração
 ## 🔗 Links Rápidos
 
 ### URLs do Sistema:
-- Aplicação: https://leo.moby.casa
-- Dashboard: https://leo.moby.casa/admin/dashboard
-- Integração OLX/ZAP: https://leo.moby.casa/admin/integracoes/olx-zap
+- Aplicação: https://libanes.moby.casa
+- Dashboard: https://libanes.moby.casa/admin/dashboard
+- Integração OLX/ZAP: https://libanes.moby.casa/admin/integracoes/olx-zap
 
 ### URLs Externas:
 - Canal Pro ZAP: https://www.canalpro.com.br/
@@ -119,7 +119,7 @@ Cliente quer configurar integração
 
 ### Webhook:
 ```
-https://leo.moby.casa/api/webhooks/olx-zap-leads
+https://libanes.moby.casa/api/webhooks/olx-zap-leads
 ```
 
 ---
