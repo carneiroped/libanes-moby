@@ -1,10 +1,26 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { validateBody, leadSchemas } from '@/lib/validation/schemas';
+import { rateLimiters } from '@/lib/security/rate-limiter';
 
 const ACCOUNT_ID = '6200796e-5629-4669-a4e1-3d8b027830fa';
 
+/**
+ * GET /api/leads - Fetch leads by IDs
+ */
 export async function GET(request: Request) {
   try {
+    // Rate limiting
+    const rateLimitKey = request.headers.get('x-forwarded-for') || 'unknown';
+    const isAllowed = await rateLimiters.api.isAllowed(rateLimitKey);
+
+    if (!isAllowed) {
+      return NextResponse.json(
+        { error: rateLimiters.api.getMessage() },
+        { status: 429 }
+      );
+    }
+
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -22,6 +38,13 @@ export async function GET(request: Request) {
 
     const ids = idsParam.split(',').filter(Boolean);
 
+    if (ids.length === 0) {
+      return NextResponse.json(
+        { error: 'ids parameter must contain at least one ID' },
+        { status: 400 }
+      );
+    }
+
     const { data: leads, error } = await supabase
       .from('leads')
       .select('id, name, phone, email')
@@ -29,56 +52,68 @@ export async function GET(request: Request) {
       .eq('account_id', ACCOUNT_ID);
 
     if (error) {
-      console.error('[API /leads GET] Error fetching leads:', error);
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error('[API /leads GET] Database error:', error.code);
+      return NextResponse.json(
+        { error: 'Failed to fetch leads' },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({ leads: leads || [] });
   } catch (error: any) {
-    console.error('[API /leads GET] Error:', error);
+    console.error('[API /leads GET] Unexpected error:', error.name);
     return NextResponse.json(
-      { error: error.message || 'Internal server error' },
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }
 }
 
+/**
+ * POST /api/leads - Create a new lead
+ */
 export async function POST(request: Request) {
   try {
+    // Rate limiting - stricter for POST operations
+    const rateLimitKey = request.headers.get('x-forwarded-for') || 'unknown';
+    const isAllowed = await rateLimiters.standard.isAllowed(rateLimitKey);
+
+    if (!isAllowed) {
+      return NextResponse.json(
+        { error: rateLimiters.standard.getMessage() },
+        { status: 429 }
+      );
+    }
+
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     );
 
-    const body = await request.json();
+    // Validate and sanitize request body
+    const validation = await validateBody(request, leadSchemas.create);
 
-    // Validar campos obrigatórios
-    if (!body.phone) {
+    if (!validation.success) {
       return NextResponse.json(
-        { error: 'Phone number is required' },
+        { error: validation.error },
         { status: 400 }
       );
     }
 
-    if (!body.name) {
-      return NextResponse.json(
-        { error: 'Name is required' },
-        { status: 400 }
-      );
-    }
+    const body = validation.data;
 
     // Preparar dados do lead com valores padrão
     const leadData = {
       ...body,
-      account_id: ACCOUNT_ID, // Adicionar account_id automaticamente
+      account_id: ACCOUNT_ID,
       source: body.source || 'website',
       status: body.status || 'novo',
-      stage: body.stage || 'lead_novo', // Stage padrão válido
+      stage: body.stage || 'lead_novo',
       score: body.score !== undefined ? body.score : 50,
       tags: body.tags || [],
     };
 
-    console.log('[API /leads POST] Creating lead with data:', leadData);
+    console.log('[API /leads POST] Creating lead');
 
     // Inserir lead no banco de dados
     const { data, error } = await supabase
@@ -88,20 +123,29 @@ export async function POST(request: Request) {
       .single();
 
     if (error) {
-      console.error('[API /leads POST] Error creating lead:', error);
+      console.error('[API /leads POST] Database error:', error.code);
+
+      // Handle specific database errors
+      if (error.code === '23505') {
+        return NextResponse.json(
+          { error: 'Lead with this phone already exists' },
+          { status: 409 }
+        );
+      }
+
       return NextResponse.json(
-        { error: error.message },
+        { error: 'Failed to create lead' },
         { status: 500 }
       );
     }
 
-    console.log('[API /leads POST] Lead created successfully:', data);
+    console.log('[API /leads POST] Lead created successfully');
 
     return NextResponse.json({ data }, { status: 201 });
   } catch (error: any) {
-    console.error('[API /leads POST] Error:', error);
+    console.error('[API /leads POST] Unexpected error:', error.name);
     return NextResponse.json(
-      { error: error.message || 'Internal server error' },
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }
